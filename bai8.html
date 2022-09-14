@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <h1>Hãy thử đoán xem!</h1>
+  <button id="start" onclick="getStarted()">Bắt đầu</button>
+</body>
+<script>
+  function getStarted() {
+    let range = parseInt(prompt("Vui lòng nhập khoảng đoán"));
+    let random = Math.ceil(Math.random()*range);
+    console.log(random)
+    let count = 0
+
+    for (let i = 0; i < 3; i++) {
+      let guess = parseInt(prompt("Vui lòng đoán số chính xác"));
+      if (count === 3) {
+       alert("Bạn đã hết lượt đoán");
+       break;
+      } else if (guess === random) {
+        alert("Chúc mừng, bạn đã đoán đúng");
+        break;
+      } else if (guess < random) {
+        alert("số bạn đoán bé hơn")
+      } else if (guess > random) {
+        alert("số bạn đoán lớn hơn")
+      }
+      count += 1;
+    }
+  }
+
+</script>
+</html>

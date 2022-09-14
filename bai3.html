@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let n = 20;
+  let count = 0;
+  let n1 = 0;
+  let n2 = 1;
+  let nextTerm;
+  let fibonacci = "1" + "<br>";
+
+  while (count <= n) {
+    nextTerm = n1 + n2;
+    n1 = n2;
+    n2 = nextTerm;
+
+    fibonacci += nextTerm + "<br>";
+
+    count++
+  }
+
+  document.write(fibonacci)
+</script>
+</body>
+</html>
